@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Proyectos - Igtacore Studios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="assets/logo.png" alt="Igtacore" class="logo">
+      <button id="langToggle3" class="lang-toggle">EN</button>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Sobre Nosotros</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Proyectos</h1>
+    <p class="muted">Aquí mostramos los proyectos activos y pasados — haz click para ver más.</p>
+
+    <div class="projects-grid" id="projectsGrid">
+      <!-- tarjetas generadas por js -->
+    </div>
+
+    <!-- Modal detalle -->
+    <div id="projectModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">×</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year3"></span> Igtacore Studios.</p>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>

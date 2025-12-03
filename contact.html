@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contacto - Igtacore Studios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="assets/logo.png" alt="Igtacore" class="logo">
+      <button id="langToggle4" class="lang-toggle">EN</button>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Sobre Nosotros</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="content contact-page">
+    <h1>Contacto</h1>
+    <p class="muted">Escríbenos para colaboración, prensa o soporte.</p>
+
+    <form id="contactForm">
+      <label>Nombre
+        <input type="text" name="name" required>
+      </label>
+      <label>Correo
+        <input type="email" name="email" required>
+      </label>
+      <label>Tipo de solicitud
+        <select name="type">
+          <option value="colab">Colaboración</option>
+          <option value="press">Prensa</option>
+          <option value="business">Negocio</option>
+          <option value="support">Soporte</option>
+        </select>
+      </label>
+      <label>Mensaje
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+
+      <div class="form-row">
+        <button class="btn" type="submit">Enviar</button>
+        <button class="btn ghost" type="reset">Limpiar</button>
+      </div>
+
+      <p id="formMsg" class="muted" aria-live="polite"></p>
+    </form>
+
+    <section class="contact-info">
+      <h3>O escríbenos a:</h3>
+      <p><strong>Email:</strong> contacto@igtacore.studio (pendiente)</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year4"></span> Igtacore Studios.</p>
+  </footer>
+
+  <script>
+  document.getElementById('year4').textContent = new Date().getFullYear();
+
+  const form = document.getElementById('contactForm');
+  const msg = document.getElementById('formMsg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msg.textContent = 'Enviando...';
+    const data = new FormData(form);
+    const body = Object.fromEntries(data.entries());
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(body)
+      });
+
+      if (res.ok) {
+        msg.textContent = '¡Mensaje enviado! Te contestaremos pronto.';
+        form.reset();
+        return;
+      }
+
+      // Fallback a Formspree (reemplaza por tu ID)
+      await fetch('https://formspree.io/f/tu_form_id', {
+        method: 'POST',
+        headers: {'Accept':'application/json'},
+        body: data
+      });
+
+      msg.textContent = '¡Mensaje enviado por Formspree!';
+      form.reset();
+
+    } catch (err) {
+      console.error(err);
+      msg.textContent = 'No se pudo enviar. Revisa tu conexión o configura el backend.';
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre Nosotros - Igtacore Studios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="assets/logo.png" alt="Igtacore" class="logo">
+      <button id="langToggle2" class="lang-toggle">EN</button>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Inicio</a>
+      <a href="about.html" data-i18n="nav.about">Sobre Nosotros</a>
+      <a href="projects.html" data-i18n="nav.projects">Proyectos</a>
+      <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="about-hero">
+      <h1 data-i18n="about.title">Nuestra Historia</h1>
+      <p data-i18n="about.lead">Igtacore Studios nació de la pasión por contar historias interactivas...</p>
+    </section>
+
+    <section class="about-grid">
+      <div class="card">
+        <h3 data-i18n="about.mission">Misión</h3>
+        <p data-i18n="about.missionText">Crear juegos que conecten emociones y jugabilidad.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="about.vision">Visión</h3>
+        <p data-i18n="about.visionText">Ser un referente indie en narrativa interactiva.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="about.team">Equipo</h3>
+        <p data-i18n="about.teamText">Artistas, programadores y diseñadores apasionados.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-i18n="about.howWeWork">¿Cómo trabajamos?</h2>
+      <ul>
+        <li>Metodologías ágiles (sprints cortos).</li>
+        <li>Prototipos y playtests frecuentes.</li>
+        <li>Foco en accesibilidad y rendimiento.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year2"></span> Igtacore Studios.</p>
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Igtacore Studios</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark">
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="assets/logo.png" alt="Igtacore" class="logo">
+      <button id="langToggle" class="lang-toggle">EN</button>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Inicio</a>
+      <a href="about.html" data-i18n="nav.about">Sobre Nosotros</a>
+      <a href="projects.html" data-i18n="nav.projects">Proyectos</a>
+      <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <img src="assets/logo.png" class="hero-logo" alt="Igtacore">
+        <h1 data-i18n="hero.title">Desarrollamos mundos. <span data-i18n="hero.subtitle">Creamos experiencias.</span></h1>
+        <p class="hero-tag" data-i18n="hero.tag">Estudio independiente de videojuegos — realtime • narrativa • gameplay</p>
+        <div class="hero-cta">
+          <a class="btn" href="projects.html" data-i18n="hero.cta">Conocer Proyectos</a>
+          <a class="btn ghost" href="about.html" data-i18n="hero.cta2">Sobre Nosotros</a>
+        </div>
+      </div>
+      <div class="hero-vfx" aria-hidden="true"></div>
+    </section>
+
+    <section class="features">
+      <article>
+        <h3 data-i18n="features.explore">Explora</h3>
+        <p data-i18n="features.exploreText">Mundos inmersivos con mecánicas innovadoras.</p>
+      </article>
+      <article>
+        <h3 data-i18n="features.collab">Colabora</h3>
+        <p data-i18n="features.collabText">Buscamos socios, artistas y programadores.</p>
+      </article>
+      <article>
+        <h3 data-i18n="features.vision">Visión</h3>
+        <p data-i18n="features.visionText">Crear experiencias memorables y responsables.</p>
+      </article>
+    </section>
+
+    <section class="preview">
+      <h2 data-i18n="preview.title">Últimos Proyectos</h2>
+      <div class="carousel" id="carousel">
+        <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+        <div class="carousel-track">
+          <div class="card">
+            <img src="assets/project1.jpg" alt="Proyecto 1">
+            <div class="card-body">
+              <h4>Proyecto Alpha</h4>
+              <p>RPG narrativo — En desarrollo</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="assets/project2.jpg" alt="Proyecto 2">
+            <div class="card-body">
+              <h4>Project Neon</h4>
+              <p>FPS cooperativo — Próximamente</p>
+            </div>
+          </div>
+          <div class="card placeholder">
+            <img src="assets/bg.jpg" alt="Próximamente">
+            <div class="card-body">
+              <h4>Próximamente</h4>
+              <p>Sorpresas — Mantente al tanto</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Siguiente">›</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <img src="assets/logo.png" alt="Igtacore small" class="logo-sm">
+      <p>© <span id="year"></span> Igtacore Studios. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+    </div>
+    <div class="socials">
+      <a href="#" aria-label="Twitter">Twitter</a>
+      <a href="#" aria-label="YouTube">YouTube</a>
+      <a href="#" aria-label="Discord">Discord</a>
+    </div>
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>
