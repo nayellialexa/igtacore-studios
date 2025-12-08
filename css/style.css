@@ -368,10 +368,11 @@ input, textarea, select{
 
 .socials a {
   color: var(--muted);
-  font-size: 26px;
-  transition: 0.3s;
+  font-size: 28px;
+  transition: .3s;
 }
 
 .socials a:hover {
   color: white;
 }
+
