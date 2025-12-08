@@ -19,10 +19,18 @@
     </div>
 
     <!-- Botón menú móvil -->
-   <button class="nav-toggle" id="menuBtn">☰</button>
+    <button class="nav-toggle" id="menuBtn">☰</button>
 
-    <!-- Enlaces -->
-    <nav class="nav-links" id="mobileMenu">
+    <!-- Menú móvil real -->
+    <div class="mobile-menu" id="realMobileMenu">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Sobre Nosotros</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="contact.html">Contacto</a>
+    </div>
+
+    <!-- Enlaces de escritorio -->
+    <nav class="nav-links" id="desktopLinks">
       <a href="index.html">Inicio</a>
       <a href="about.html">Sobre Nosotros</a>
       <a href="projects.html">Proyectos</a>
@@ -35,6 +43,7 @@
     <section class="hero" id="hero">
       <div class="hero-inner">
         <img src="assets/logo.png" class="hero-logo" alt="Igtacore">
+
         <h1>Desarrollamos mundos. <span>Creamos experiencias.</span></h1>
         <p class="hero-tag">Estudio independiente de videojuegos — realtime • narrativa • gameplay</p>
 
@@ -43,7 +52,6 @@
           <a class="btn ghost" href="about.html">Sobre Nosotros</a>
         </div>
       </div>
-      <div class="hero-vfx" aria-hidden="true"></div>
     </section>
 
     <!-- FEATURES -->
@@ -52,10 +60,12 @@
         <h3>Explora</h3>
         <p>Mundos inmersivos con mecánicas innovadoras.</p>
       </article>
+
       <article>
         <h3>Colabora</h3>
         <p>Buscamos socios, artistas y programadores.</p>
       </article>
+
       <article>
         <h3>Visión</h3>
         <p>Crear experiencias memorables y responsables.</p>
@@ -66,6 +76,7 @@
     <section class="preview">
       <h2>Últimos Proyectos</h2>
       <div class="carousel" id="carousel">
+
         <button class="carousel-btn prev">‹</button>
 
         <div class="carousel-track">
@@ -102,7 +113,6 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div>
-      <img src="assets/logo.png" alt="Igtacore small" class="logo-sm">
       <p>© <span id="year"></span> Igtacore Studios. Todos los derechos reservados.</p>
     </div>
     <div class="socials">
@@ -116,11 +126,15 @@
   <script>
     // Menú móvil
     const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    const realMobileMenu = document.getElementById("realMobileMenu");
 
     menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("show-menu");
+      realMobileMenu.classList.toggle("show-menu");
     });
 
     // Año dinámico
-    document.getElementById("year").textC
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
