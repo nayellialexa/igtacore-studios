@@ -359,3 +359,19 @@ input, textarea, select{
     display: block;
     margin: 0 auto;
 }
+/* ICONOS DE REDES */
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.socials a {
+  color: var(--muted);
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: white;
+}

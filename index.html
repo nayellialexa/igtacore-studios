@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Igtacore Studios</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- FONT AWESOME (ICONOS) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SVLyO8lZ2FuPu6joMnIKh4j/wcgUp3NEPoPFcAckU4iigFsMghvYDn8ApX2HFqRSbVSSMzdEar3Y2Gj54jjF0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -21,7 +29,7 @@
     <!-- Botón menú móvil -->
     <button class="nav-toggle" id="menuBtn">☰</button>
 
-    <!-- Menú móvil real -->
+    <!-- Menú móvil -->
     <div class="mobile-menu" id="realMobileMenu">
       <a href="index.html">Inicio</a>
       <a href="about.html">Sobre Nosotros</a>
@@ -29,7 +37,7 @@
       <a href="contact.html">Contacto</a>
     </div>
 
-    <!-- Enlaces de escritorio -->
+    <!-- Enlaces escritorio -->
     <nav class="nav-links" id="desktopLinks">
       <a href="index.html">Inicio</a>
       <a href="about.html">Sobre Nosotros</a>
@@ -56,20 +64,9 @@
 
     <!-- FEATURES -->
     <section class="features">
-      <article>
-        <h3>Explora</h3>
-        <p>Mundos inmersivos con mecánicas innovadoras.</p>
-      </article>
-
-      <article>
-        <h3>Colabora</h3>
-        <p>Buscamos socios, artistas y programadores.</p>
-      </article>
-
-      <article>
-        <h3>Visión</h3>
-        <p>Crear experiencias memorables y responsables.</p>
-      </article>
+      <article><h3>Explora</h3><p>Mundos inmersivos con mecánicas innovadoras.</p></article>
+      <article><h3>Colabora</h3><p>Buscamos socios, artistas y programadores.</p></article>
+      <article><h3>Visión</h3><p>Crear experiencias memorables y responsables.</p></article>
     </section>
 
     <!-- CAROUSEL -->
@@ -115,16 +112,23 @@
     <div>
       <p>© <span id="year"></span> Igtacore Studios. Todos los derechos reservados.</p>
     </div>
+
+    <!-- Redes sociales con íconos -->
     <div class="socials">
-      <a href="#">Twitter</a>
-      <a href="#">YouTube</a>
-      <a href="#">Discord</a>
+      <a href="https://www.tiktok.com/@igtacore_studios" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://x.com/igtacorestudios" target="_blank">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/igtacorestudios/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
     </div>
   </footer>
 
   <!-- JS -->
   <script>
-    // Menú móvil
     const menuBtn = document.getElementById("menuBtn");
     const realMobileMenu = document.getElementById("realMobileMenu");
 
@@ -132,7 +136,6 @@
       realMobileMenu.classList.toggle("show-menu");
     });
 
-    // Año dinámico
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
