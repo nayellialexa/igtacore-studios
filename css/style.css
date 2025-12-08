@@ -350,3 +350,12 @@ input, textarea, select{
     min-width:220px !important;
   }
 }
+/* FIX: Hacer que la imagen del hero no rompa el ancho del móvil */
+.hero img,
+.hero-logo {
+    width: 100% !important;
+    max-width: 320px; /* tamaño razonable en móvil */
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+}
