@@ -229,3 +229,69 @@ body{
     gap:12px;
   }
 }
+/* FIX DEFINITIVO PARA VERSIÓN MÓVIL */
+@media screen and (max-width: 760px) {
+
+  body {
+    background: var(--bg) !important;
+  }
+
+  .navbar {
+    padding: 12px 16px !important;
+  }
+
+  .nav-links {
+    display: none !important;
+    flex-direction: column;
+    background: #0c0c12;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 180px;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 999;
+  }
+
+  .nav-links.show-menu {
+    display: flex !important;
+  }
+
+  .nav-toggle {
+    display: block !important;
+  }
+
+  .hero h1 {
+    font-size: 28px !important;
+    line-height: 1.2;
+  }
+
+  .hero-logo {
+    width: 150px !important;
+  }
+
+  .features {
+    flex-direction: column !important;
+    gap: 14px;
+  }
+
+  .carousel {
+    flex-direction: column !important;
+    padding: 0 10px;
+  }
+
+  .carousel-track {
+    overflow-x: scroll !important;
+    scroll-snap-type: x mandatory;
+  }
+
+  .card {
+    min-width: 260px !important;
+  }
+
+  .footer {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px;
+  }
+}
