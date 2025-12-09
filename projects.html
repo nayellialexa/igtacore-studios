@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-left">
       <img src="assets/logo.png" alt="Igtacore" class="logo">
@@ -20,12 +22,22 @@
     </nav>
   </header>
 
+  <!-- 🔥 HERO ANIMADO DE ESTA PÁGINA -->
+  <section class="hero-projects">
+    <div class="hero-inner">
+      <h1>Proyectos</h1>
+      <p class="hero-tag">Juegos en desarrollo, prototipos y experiencias interactivas.</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
   <main class="content">
-    <h1>Proyectos</h1>
-    <p class="muted">Aquí mostramos los proyectos activos y pasados — haz click para ver más.</p>
+
+    <h2 class="muted">Explora nuestros proyectos</h2>
+    <p class="muted">Haz click para ver detalles, imágenes, progreso y características.</p>
 
     <div class="projects-grid" id="projectsGrid">
-      <!-- tarjetas generadas por js -->
+      <!-- Tarjetas dinámicas desde JS -->
     </div>
 
     <!-- Modal detalle -->
@@ -35,6 +47,7 @@
         <div id="modalBody"></div>
       </div>
     </div>
+
   </main>
 
   <footer class="footer">
@@ -42,6 +55,9 @@
   </footer>
 
   <script src="js/projects.js"></script>
-  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>

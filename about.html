@@ -7,55 +7,67 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-left">
       <img src="assets/logo.png" alt="Igtacore" class="logo">
       <button id="langToggle2" class="lang-toggle">EN</button>
     </div>
     <nav class="nav-links">
-      <a href="index.html" data-i18n="nav.home">Inicio</a>
-      <a href="about.html" data-i18n="nav.about">Sobre Nosotros</a>
-      <a href="projects.html" data-i18n="nav.projects">Proyectos</a>
-      <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Sobre Nosotros</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="contact.html">Contacto</a>
     </nav>
   </header>
 
+  <!-- HERO CON DEGRADADO ANIMADO -->
+  <section class="hero-about">
+    <div class="hero-inner">
+      <h1>Nuestra Historia</h1>
+      <p>Igtacore Studios nació de la pasión por contar historias interactivas...</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
   <main class="content">
-    <section class="hero-about">
-      <h1 data-i18n="about.title">Nuestra Historia</h1>
-      <p data-i18n="about.lead">Igtacore Studios nació de la pasión por contar historias interactivas...</p>
-    </section>
 
     <section class="about-grid">
       <div class="card">
-        <h3 data-i18n="about.mission">Misión</h3>
-        <p data-i18n="about.missionText">Crear juegos que conecten emociones y jugabilidad.</p>
+        <h3>Misión</h3>
+        <p>Crear juegos que conecten emociones y jugabilidad.</p>
       </div>
+
       <div class="card">
-        <h3 data-i18n="about.vision">Visión</h3>
-        <p data-i18n="about.visionText">Ser un referente indie en narrativa interactiva.</p>
+        <h3>Visión</h3>
+        <p>Ser un referente indie en narrativa interactiva.</p>
       </div>
+
       <div class="card">
-        <h3 data-i18n="about.team">Equipo</h3>
-        <p data-i18n="about.teamText">Artistas, programadores y diseñadores apasionados.</p>
+        <h3>Equipo</h3>
+        <p>Artistas, programadores y diseñadores apasionados.</p>
       </div>
     </section>
 
     <section>
-      <h2 data-i18n="about.howWeWork">¿Cómo trabajamos?</h2>
+      <h2>¿Cómo trabajamos?</h2>
       <ul>
         <li>Metodologías ágiles (sprints cortos).</li>
         <li>Prototipos y playtests frecuentes.</li>
         <li>Foco en accesibilidad y rendimiento.</li>
       </ul>
     </section>
+
   </main>
 
   <footer class="footer">
     <p>© <span id="year2"></span> Igtacore Studios.</p>
   </footer>
 
-  <script src="js/lang.js"></script>
-  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
