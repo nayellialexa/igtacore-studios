@@ -2,8 +2,8 @@
   --bg:#07070b;
   --panel:#0f1220;
   --muted:#bdbfc6;
-  --accent1: #ff7a00;
-  --accent2: #ff3c00;
+  --accent1: #007CF0;
+  --accent2: #FF7A00;
   --glass: rgba(255,255,255,0.04);
   --maxw: 1100px;
 }
@@ -105,19 +105,24 @@ html,body{
 }
 
 /* ==== HERO ==== */
-.hero{
-  min-height:85vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding-top:90px;
-  position:relative;
-  overflow:hidden;
-  background-image: url('../assets/bg.jpg');
-  background-size:cover;
-  background-position:center;
-}
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+  position: relative;
+  overflow: hidden;
 
+  /* 🎨 Degradado azul → naranja */
+  background:
+    linear-gradient(120deg, #007CF0 0%, #FF7A00 100%),
+    url('../assets/bg.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay; /* Mezcla profesional */
+}
 .hero-inner{
   text-align:center;
   max-width:var(--maxw);
@@ -146,7 +151,7 @@ html,body{
   border-radius:10px;
   text-decoration:none;
   font-weight:700;
-  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  background: linear-gradient(90deg, #007CF0, #FF7A00);
   color:white;
   box-shadow:0 8px 18px rgba(0,0,0,0.5);
 }
