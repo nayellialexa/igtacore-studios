@@ -375,4 +375,18 @@ input, textarea, select{
 .socials a:hover {
   color: white;
 }
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials a i {
+  font-size: 28px;
+  color: var(--muted);
+  transition: .3s;
+}
+
+.socials a i:hover {
+  color: white;
+}
 
