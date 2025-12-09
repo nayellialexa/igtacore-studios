@@ -114,14 +114,17 @@ html,body{
   position: relative;
   overflow: hidden;
 
-  /* 🎨 Degradado azul → naranja */
+  /* 🎨 Degradado azul → naranja SIEMPRE visible */
   background:
     linear-gradient(120deg, #007CF0 0%, #FF7A00 100%),
     url('../assets/bg.jpg');
 
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay; /* Mezcla profesional */
+  background-repeat: no-repeat;
+
+  /* Mezcla la imagen con el degradado */
+  background-blend-mode: overlay;
 }
 .hero-inner{
   text-align:center;
