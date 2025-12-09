@@ -114,17 +114,33 @@ html,body{
   position: relative;
   overflow: hidden;
 
-  /* 🎨 Degradado azul → naranja SIEMPRE visible */
+  /* Fondo con degradado animado + imagen */
   background:
-    linear-gradient(120deg, #007CF0 0%, #FF7A00 100%),
+    linear-gradient(120deg, #007CF0, #FF7A00, #FF3C00, #00D4FF),
     url('../assets/bg.jpg');
-
-  background-size: cover;
+  
+  background-size: 300% 300%, cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* Mezcla la imagen con el degradado */
+  /* Mezcla */
   background-blend-mode: overlay;
+
+  /* Animación del degradado */
+  animation: gradientMove 12s ease infinite;
+}
+
+/* Animación del degradado */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%, center;
+  }
+  50% {
+    background-position: 100% 50%, center;
+  }
+  100% {
+    background-position: 0% 50%, center;
+  }
 }
 .hero-inner{
   text-align:center;
@@ -154,7 +170,7 @@ html,body{
   border-radius:10px;
   text-decoration:none;
   font-weight:700;
-  background: linear-gradient(90deg, #007CF0, #FF7A00);
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
   color:white;
   box-shadow:0 8px 18px rgba(0,0,0,0.5);
 }
@@ -399,4 +415,128 @@ input, textarea, select{
   transform: translateY(-3px);
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
   color: #fff;
+}
+/* HERO ANIMADO – INDEX */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(120deg,
+      #007CF0,
+      #00A8FF,
+      #FF7A00,
+      #FF3C00,
+      #FF9E3D,
+      #007CF0
+    ),
+    url('../assets/bg.jpg');
+
+  background-size: 400% 400%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+  animation: gradientMain 14s ease infinite;
+}
+
+@keyframes gradientMain {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
+/* HERO ANIMADO – ABOUT */
+.hero-about {
+  min-height: 70vh;
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(120deg,
+      #6A00F4,
+      #B300FF,
+      #FF3CD7,
+      #FF78B8,
+      #6A00F4
+    ),
+    url('../assets/bg.jpg');
+
+  background-size: 400% 400%, cover;
+  background-blend-mode: overlay;
+  background-position: center;
+
+  animation: gradientAbout 14s ease infinite;
+}
+
+@keyframes gradientAbout {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
+/* HERO ANIMADO – PROJECTS */
+.hero-projects {
+  min-height: 70vh;
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(120deg,
+      #00FFA3,
+      #00D4FF,
+      #0099FF,
+      #00C6FF,
+      #00FFA3
+    ),
+    url('../assets/bg.jpg');
+
+  background-size: 400% 400%, cover;
+  background-blend-mode: overlay;
+  background-position: center;
+
+  animation: gradientProjects 16s ease infinite;
+}
+
+@keyframes gradientProjects {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
+/* HERO ANIMADO – CONTACT */
+.hero-contact {
+  min-height: 70vh;
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(120deg,
+      #FF0000,
+      #FF5E00,
+      #FF9A00,
+      #FFD000,
+      #FF0000
+    ),
+    url('../assets/bg.jpg');
+
+  background-size: 400% 400%, cover;
+  background-blend-mode: overlay;
+  background-position: center;
+
+  animation: gradientContact 12s ease infinite;
+}
+
+@keyframes gradientContact {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
 }
