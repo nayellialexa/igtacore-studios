@@ -104,7 +104,7 @@ html,body{
   padding:10px 0;
 }
 
-/* ==== HERO ==== */
+/* 🔥🔥 HERO ANIMADO – INDEX (CORREGIDO) 🔥🔥 */
 .hero {
   min-height: 85vh;
   display: flex;
@@ -114,34 +114,30 @@ html,body{
   position: relative;
   overflow: hidden;
 
-  /* Fondo con degradado animado + imagen */
   background:
-    linear-gradient(120deg, #007CF0, #FF7A00, #FF3C00, #00D4FF),
+    linear-gradient(120deg,
+      #007CF0,
+      #00A8FF,
+      #FF7A00,
+      #FF3C00,
+      #FF9E3D,
+      #007CF0
+    ),
     url('../assets/bg.jpg');
-  
-  background-size: 300% 300%, cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
-  /* Mezcla */
+  background-size: 400% 400%, cover;
+  background-position: center;
   background-blend-mode: overlay;
 
-  /* Animación del degradado */
-  animation: gradientMove 12s ease infinite;
+  animation: gradientMain 14s ease infinite;
 }
 
-/* Animación del degradado */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%, center;
-  }
-  50% {
-    background-position: 100% 50%, center;
-  }
-  100% {
-    background-position: 0% 50%, center;
-  }
+@keyframes gradientMain {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
 .hero-inner{
   text-align:center;
   max-width:var(--maxw);
@@ -297,6 +293,7 @@ html,body{
   margin:0 auto;
 }
 
+/* ==== FORM ==== */
 .contact-page form{
   max-width:640px;
 }
@@ -332,12 +329,35 @@ input, textarea, select{
   flex-wrap:wrap;
 }
 
-/* ============================
-      RESPONSIVE MOVIL
-=============================== */
+/* ==== REDES ==== */
+.socials {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--muted);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  font-weight: 600;
+  transition: .2s ease;
+}
+
+.socials a:hover{
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color:white;
+}
+
+/* ==== RESPONSIVE ==== */
 @media (max-width:760px){
 
-  /* NAV */
   .nav-links{
     display:none !important;
   }
@@ -350,22 +370,15 @@ input, textarea, select{
     justify-content:space-between !important;
   }
 
-  .nav-left{
-    flex:1 !important;
-  }
-
-  /* HERO */
   .hero h1{
     font-size:28px !important;
   }
 
-  /* FEATURES */
   .features{
     flex-direction:column;
     align-items:center;
   }
 
-  /* CAROUSEL */
   .carousel-track{
     gap:10px !important;
   }
@@ -373,170 +386,4 @@ input, textarea, select{
   .card{
     min-width:220px !important;
   }
-}
-/* FIX: Hacer que la imagen del hero no rompa el ancho del móvil */
-.hero img,
-.hero-logo {
-    width: 100% !important;
-    max-width: 320px; /* tamaño razonable en móvil */
-    height: auto !important;
-    display: block;
-    margin: 0 auto;
-}
-/* ICONOS DE REDES */
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-/* Redes sociales (texto simple) */
-.socials {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-.socials a {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--muted);
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.03);
-  font-weight: 600;
-  transition: transform .12s ease, background .12s ease, color .12s ease;
-}
-
-.socials a:hover{
-  transform: translateY(-3px);
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
-  color: #fff;
-}
-/* HERO ANIMADO – INDEX */
-.hero {
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 90px;
-  position: relative;
-  overflow: hidden;
-
-  background:
-    linear-gradient(120deg,
-      #007CF0,
-      #00A8FF,
-      #FF7A00,
-      #FF3C00,
-      #FF9E3D,
-      #007CF0
-    ),
-    url('../assets/bg.jpg');
-
-  background-size: 400% 400%, cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-
-  animation: gradientMain 14s ease infinite;
-}
-
-@keyframes gradientMain {
-  0% { background-position: 0% 50%, center; }
-  50% { background-position: 100% 50%, center; }
-  100% { background-position: 0% 50%, center; }
-}
-/* HERO ANIMADO – ABOUT */
-.hero-about {
-  min-height: 70vh;
-  padding-top: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background:
-    linear-gradient(120deg,
-      #6A00F4,
-      #B300FF,
-      #FF3CD7,
-      #FF78B8,
-      #6A00F4
-    ),
-    url('../assets/bg.jpg');
-
-  background-size: 400% 400%, cover;
-  background-blend-mode: overlay;
-  background-position: center;
-
-  animation: gradientAbout 14s ease infinite;
-}
-
-@keyframes gradientAbout {
-  0% { background-position: 0% 50%, center; }
-  50% { background-position: 100% 50%, center; }
-  100% { background-position: 0% 50%, center; }
-}
-/* HERO ANIMADO – PROJECTS */
-.hero-projects {
-  min-height: 70vh;
-  padding-top: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background:
-    linear-gradient(120deg,
-      #00FFA3,
-      #00D4FF,
-      #0099FF,
-      #00C6FF,
-      #00FFA3
-    ),
-    url('../assets/bg.jpg');
-
-  background-size: 400% 400%, cover;
-  background-blend-mode: overlay;
-  background-position: center;
-
-  animation: gradientProjects 16s ease infinite;
-}
-
-@keyframes gradientProjects {
-  0% { background-position: 0% 50%, center; }
-  50% { background-position: 100% 50%, center; }
-  100% { background-position: 0% 50%, center; }
-}
-/* HERO ANIMADO – CONTACT */
-.hero-contact {
-  min-height: 70vh;
-  padding-top: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background:
-    linear-gradient(120deg,
-      #FF0000,
-      #FF5E00,
-      #FF9A00,
-      #FFD000,
-      #FF0000
-    ),
-    url('../assets/bg.jpg');
-
-  background-size: 400% 400%, cover;
-  background-blend-mode: overlay;
-  background-position: center;
-
-  animation: gradientContact 12s ease infinite;
-}
-
-@keyframes gradientContact {
-  0% { background-position: 0% 50%, center; }
-  50% { background-position: 100% 50%, center; }
-  100% { background-position: 0% 50%, center; }
 }
