@@ -187,4 +187,182 @@ body{
     pointer-events:auto;
   }
 }
+/* ==========================
+   HERO – INDEX
+========================== */
+.hero {
+  background:
+    linear-gradient(120deg,
+      #007CF0,
+      #00A8FF,
+      #FF7A00,
+      #FF3C00,
+      #007CF0
+    ),
+    url('../assets/bg.jpg');
+
+  background-size: 400% 400%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+  animation: gradientIndex 14s ease infinite;
+}
+
+@keyframes gradientIndex {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
+
+/* ==========================
+   HERO – ABOUT
+========================== */
+.hero-about {
+  background:
+    linear-gradient(120deg,
+      #6A00F4,
+      #9B4DFF,
+      #FF3CD7,
+      #FF78B8,
+      #6A00F4
+    ),
+    url('../assets/bg.jpg');
+
+  background-size: 400% 400%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+  animation: gradientAbout 16s ease infinite;
+}
+
+@keyframes gradientAbout {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
+
+/* ==========================
+   HERO – PROJECTS
+========================== */
+.hero-projects {
+  background:
+    linear-gradient(120deg,
+      #00FFA3,
+      #00D4FF,
+      #0099FF,
+      #00C6FF,
+      #00FFA3
+    ),
+    url('../assets/bg.jpg');
+
+  background-size: 400% 400%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+  animation: gradientProjects 18s ease infinite;
+}
+
+@keyframes gradientProjects {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
+
+/* ==========================
+   HERO – CONTACT
+========================== */
+.hero-contact {
+  background:
+    linear-gradient(120deg,
+      #FF0000,
+      #FF5E00,
+      #FF9A00,
+      #FFD000,
+      #FF0000
+    ),
+    url('../assets/bg.jpg');
+
+  background-size: 400% 400%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+  animation: gradientContact 14s ease infinite;
+}
+
+@keyframes gradientContact {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
+/* ==========================
+   CONTACT FORM
+========================== */
+.contact {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  background: var(--panel);
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.1);
+  background: #0b0d18;
+  color: white;
+  font-family: Inter, sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* ==========================
+   SOCIALS
+========================== */
+.socials {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.socials a:hover {
+  color: white;
+}
 

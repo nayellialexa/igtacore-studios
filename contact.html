@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto - Igtacore Studios</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
 <header class="navbar">
   <img src="assets/logo.png" class="logo" alt="Igtacore">
 
   <div class="nav-actions">
-    <!-- Idioma -->
     <button id="langToggle" class="lang-btn">EN</button>
-
-    <!-- Menú móvil -->
     <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
   </div>
 
-  <!-- MENÚ (ESTO ES LO QUE FALTABA) -->
   <nav class="nav-menu" id="navMenu">
     <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
     <a href="about.html" data-es="Sobre Nosotros" data-en="About">Sobre Nosotros</a>
@@ -30,43 +33,86 @@
   </nav>
 </header>
 
-
+<!-- =========================
+     HERO CONTACT
+========================= -->
 <section class="hero hero-contact">
   <div class="hero-content">
-    <h1 data-es="Contacto" data-en="Contact">Contacto</h1>
-    <p data-es="¿Quieres colaborar o ponerte en contacto con nosotros?"
-       data-en="Want to collaborate or get in touch with us?">
-       ¿Quieres colaborar o ponerte en contacto con nosotros?
+    <h1 data-es="Contáctanos" data-en="Contact Us">Contáctanos</h1>
+    <p data-es="Cuéntanos sobre tu proyecto o idea"
+       data-en="Tell us about your project or idea">
+      Cuéntanos sobre tu proyecto o idea
     </p>
   </div>
 </section>
 
-<section class="content">
-  <p>
-    📧 <strong>Email:</strong>
-    <a href="mailto:igtacorestudios@gmail.com">igtacorestudios@gmail.com</a>
-  </p>
+<!-- =========================
+     FORMULARIO
+========================= -->
+<section class="content contact">
 
-  <p>
-    Síguenos en nuestras redes para conocer avances y novedades.
-  </p>
+  <form class="contact-form">
+    
+    <div class="form-group">
+      <label data-es="Nombre completo" data-en="Full name">Nombre completo</label>
+      <input type="text" placeholder="Tu nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="correo@ejemplo.com" required>
+    </div>
+
+    <div class="form-group">
+      <label data-es="¿En qué te podemos ayudar?"
+             data-en="How can we help you?">
+        ¿En qué te podemos ayudar?
+      </label>
+      <select required>
+        <option value="">Selecciona una opción</option>
+        <option>Desarrollo de videojuegos</option>
+        <option>Colaboración</option>
+        <option>Arte / Diseño</option>
+        <option>Programación</option>
+        <option>Otro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label data-es="Mensaje" data-en="Message">Mensaje</label>
+      <textarea rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn"
+            data-es="Enviar mensaje"
+            data-en="Send message">
+      Enviar mensaje
+    </button>
+
+  </form>
+
 </section>
 
+<!-- =========================
+     FOOTER
+========================= -->
 <footer class="footer">
-  <div class="footer-content">
-    <p>© <span id="year"></span> Igtacore Studios</p>
+  <p>© <span id="year"></span> Igtacore Studios</p>
 
-    <div class="socials">
-      <a href="https://www.tiktok.com/@igtacore_studios" target="_blank">TikTok</a>
-      <a href="https://www.instagram.com/igtacorestudios/" target="_blank">Instagram</a>
-      <a href="https://x.com/igtacorestudios" target="_blank">X</a>
-      <a href="mailto:igtacorestudios@gmail.com">Email</a>
-    </div>
+  <div class="socials">
+    <a href="https://www.tiktok.com/@igtacore_studios" target="_blank">TikTok</a>
+    <a href="https://www.instagram.com/igtacorestudios/" target="_blank">Instagram</a>
+    <a href="https://x.com/igtacorestudios" target="_blank">X</a>
+    <a href="mailto:igtacorestudios@gmail.com">Email</a>
   </div>
 </footer>
 
+<!-- =========================
+     JS
+========================= -->
 <script src="js/menu.js"></script>
 <script src="js/lang.js"></script>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
