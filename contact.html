@@ -12,7 +12,7 @@
 <body>
 
 <header class="navbar">
-  <img src="assets/logo.png" class="logo" alt="Igtacore">
+  <img src="assets/logo.png" class="logo" alt="Igtacore Studios">
 
   <div class="nav-actions">
     <button id="langToggle" class="lang-btn">EN</button>
@@ -27,33 +27,43 @@
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero hero-contact">
   <div class="hero-content">
     <h1 data-es="Contacto" data-en="Contact">Contacto</h1>
-    <p data-es="¿Quieres colaborar con nosotros?"
-       data-en="Want to collaborate with us?">
-       ¿Quieres colaborar con nosotros?
+    <p data-es="¿Quieres colaborar o ponerte en contacto con nosotros?"
+       data-en="Want to collaborate or get in touch with us?">
+       ¿Quieres colaborar o ponerte en contacto con nosotros?
     </p>
   </div>
 </section>
 
 <section class="content">
-  <p>Email: contacto@igtacore.com</p>
-  <p data-es="Síguenos en redes sociales"
-     data-en="Follow us on social media">
-     Síguenos en redes sociales
+  <p>
+    📧 <strong>Email:</strong>
+    <a href="mailto:igtacorestudios@gmail.com">igtacorestudios@gmail.com</a>
+  </p>
+
+  <p>
+    Síguenos en nuestras redes para conocer avances y novedades.
   </p>
 </section>
 
 <footer class="footer">
-  <p>© <span id="year"></span> Igtacore Studios</p>
+  <div class="footer-content">
+    <p>© <span id="year"></span> Igtacore Studios</p>
+
+    <div class="socials">
+      <a href="https://www.tiktok.com/@igtacore_studios" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/igtacorestudios/" target="_blank">Instagram</a>
+      <a href="https://x.com/igtacorestudios" target="_blank">X</a>
+      <a href="mailto:igtacorestudios@gmail.com">Email</a>
+    </div>
+  </div>
 </footer>
 
+<script src="js/menu.js"></script>
 <script src="js/lang.js"></script>
 <script>
-  const menuBtn = document.getElementById("menuBtn");
-  const navMenu = document.getElementById("navMenu");
-  menuBtn.onclick = () => navMenu.classList.toggle("open");
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 

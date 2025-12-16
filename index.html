@@ -18,17 +18,17 @@
      NAVBAR
 ========================= -->
 <header class="navbar">
-  <img src="assets/logo.png" class="logo" alt="Igtacore">
+  <img src="assets/logo.png" class="logo" alt="Igtacore Studios">
 
   <div class="nav-actions">
     <!-- Idioma -->
     <button id="langToggle" class="lang-btn">EN</button>
 
-    <!-- Menú móvil -->
+    <!-- Menú móvil (solo visible en móvil por CSS) -->
     <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
   </div>
 
-  <!-- Menú navegación -->
+  <!-- Navegación -->
   <nav class="nav-menu" id="navMenu">
     <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
     <a href="about.html" data-es="Sobre Nosotros" data-en="About">Sobre Nosotros</a>
@@ -38,11 +38,11 @@
 </header>
 
 <!-- =========================
-     HERO
+     HERO HOME
 ========================= -->
 <section class="hero">
   <div class="hero-content">
-    <img src="assets/logo.png" class="hero-logo" alt="Igtacore">
+    <img src="assets/logo.png" class="hero-logo" alt="Igtacore Logo">
 
     <h1 data-es="Desarrollamos mundos"
         data-en="We build worlds">
@@ -69,24 +69,26 @@
      FOOTER
 ========================= -->
 <footer class="footer">
-  <p>© <span id="year"></span> Igtacore Studios</p>
+  <div class="footer-content">
+    <p>© <span id="year"></span> Igtacore Studios</p>
+    <div class="socials">
+      <a href="https://www.tiktok.com/@igtacore_studios" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/igtacorestudios/" target="_blank">Instagram</a>
+      <a href="https://x.com/igtacorestudios" target="_blank">X</a>
+      <a href="mailto:igtacorestudios@gmail.com">Email</a>
+    </div>
+  </div>
 </footer>
 
+
 <!-- =========================
-     JS
+     JS GLOBAL
 ========================= -->
+<script src="js/menu.js"></script>
 <script src="js/lang.js"></script>
 
 <script>
-  /* ===== MENÚ HAMBURGUESA ===== */
-  const menuBtn = document.getElementById("menuBtn");
-  const navMenu = document.getElementById("navMenu");
-
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
-  });
-
-  /* ===== AÑO AUTOMÁTICO ===== */
+  // Año automático
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 

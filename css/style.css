@@ -7,30 +7,19 @@
   --orange:#FF7A00;
 }
 
-/* ==========================
-   RESET
-========================== */
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-  font-family:Inter, sans-serif;
+  font-family:Inter,sans-serif;
   background:var(--bg);
   color:var(--text);
   overflow-x:hidden;
 }
 
-/* ==========================
-   NAVBAR
-========================== */
+/* NAVBAR */
 .navbar{
   position:fixed;
-  top:0;
-  left:0;
-  right:0;
+  top:0;left:0;right:0;
   height:64px;
   padding:0 20px;
   display:flex;
@@ -40,55 +29,31 @@ body{
   backdrop-filter:blur(6px);
   z-index:1000;
 }
-
-.logo{
-  height:38px;
-}
-
-/* Acciones derecha */
-.nav-actions{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.lang-btn,
-.menu-btn{
+.logo{height:38px;}
+.nav-actions{display:flex;gap:12px;}
+.lang-btn,.menu-btn{
   background:none;
   border:1px solid rgba(255,255,255,.15);
-  color:white;
+  color:#fff;
   padding:6px 10px;
   border-radius:6px;
   cursor:pointer;
 }
+.menu-btn{display:none;font-size:22px;}
 
-/* ==========================
-   MENU DESKTOP
-========================== */
+/* MENU */
 .nav-menu{
   display:flex;
   gap:24px;
 }
-
 .nav-menu a{
   text-decoration:none;
   color:var(--muted);
   font-weight:600;
 }
+.nav-menu a:hover{color:#fff;}
 
-.nav-menu a:hover{
-  color:white;
-}
-
-/* OCULTAR HAMBURGUESA EN PC */
-.menu-btn{
-  display:none;
-  font-size:22px;
-}
-
-/* ==========================
-   HERO – PC
-========================== */
+/* HERO BASE */
 .hero{
   min-height:85vh;
   padding-top:90px;
@@ -96,89 +61,95 @@ body{
   align-items:center;
   justify-content:center;
   text-align:center;
-  position:relative;
-  overflow:hidden;
-
   background:
-    linear-gradient(120deg,
-      #007CF0,
-      #00A8FF,
-      #FF7A00,
-      #FF3C00,
-      #007CF0
-    ),
+    linear-gradient(120deg,#007CF0,#00A8FF,#FF7A00,#FF3C00,#007CF0),
     url('../assets/bg.jpg');
-
-  background-repeat:no-repeat;
-  background-size:400% 400%, cover;
+  background-size:400% 400%,cover;
   background-position:center;
   background-blend-mode:overlay;
-
-  animation:gradientMain 14s ease infinite;
+  animation:gradient 14s ease infinite;
 }
-
-@keyframes gradientMain{
+@keyframes gradient{
   0%{background-position:0% 50%,center;}
   50%{background-position:100% 50%,center;}
   100%{background-position:0% 50%,center;}
 }
-
-.hero-content{
-  max-width:900px;
-  padding:40px 20px;
+.hero-about{
+  background:
+    linear-gradient(120deg,#6A00F4,#B300FF,#FF3CD7,#6A00F4),
+    url('../assets/bg.jpg');
 }
-
-.hero-logo{
-  width:220px;
-  margin-bottom:20px;
+.hero-projects{
+  background:
+    linear-gradient(120deg,#00FFA3,#00D4FF,#0099FF,#00FFA3),
+    url('../assets/bg.jpg');
 }
-
-.hero h1{
-  font-family:Montserrat,sans-serif;
-  font-size:42px;
-  margin-bottom:12px;
+.hero-contact{
+  background:
+    linear-gradient(120deg,#FF5E00,#FF9A00,#FFD000,#FF5E00),
+    url('../assets/bg.jpg');
 }
+.hero-content{max-width:900px;padding:40px 20px;}
+.hero-logo{width:220px;margin-bottom:20px;}
+.hero h1{font-family:Montserrat,sans-serif;font-size:42px;margin-bottom:12px;}
+.hero p{color:var(--muted);margin-bottom:24px;}
 
-.hero p{
-  color:var(--muted);
-  margin-bottom:24px;
-}
-
+/* BOTÓN */
 .btn{
-  display:inline-block;
   padding:12px 24px;
   border-radius:10px;
   background:linear-gradient(90deg,var(--blue),var(--orange));
-  color:white;
+  color:#fff;
   text-decoration:none;
   font-weight:700;
 }
 
-/* ==========================
-   FOOTER
-========================== */
+/* CONTENT */
+.content{
+  max-width:900px;
+  margin:60px auto;
+  padding:0 20px;
+}
+.project{margin-bottom:32px;}
+
+/* FOOTER */
 .footer{
-  padding:24px;
-  text-align:center;
+  padding:28px;
   background:#050508;
+  text-align:center;
+}
+.footer-content{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:center;
+}
+.socials{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.socials a{
+  padding:8px 14px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.12);
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600;
+  transition:.25s;
+}
+.socials a:hover{
+  background:linear-gradient(90deg,var(--blue),var(--orange));
+  color:#fff;
+  transform:translateY(-2px);
 }
 
-/* ==========================
-   MOBILE
-========================== */
+/* MOBILE */
 @media(max-width:760px){
-
-  /* Mostrar hamburguesa */
-  .menu-btn{
-    display:block;
-  }
-
-  /* Menú móvil */
+  .menu-btn{display:block;}
   .nav-menu{
     position:fixed;
-    top:64px;
-    left:0;
-    right:0;
+    top:64px;left:0;right:0;
     background:#0f1220;
     flex-direction:column;
     align-items:center;
@@ -186,23 +157,8 @@ body{
     padding:24px 0;
     display:none;
   }
-
-  .nav-menu.open{
-    display:flex;
-  }
-
-  /* HERO MÓVIL */
-  .hero{
-    min-height:65vh;
-    background-size:400% 400%, contain;
-    background-position:center;
-  }
-
-  .hero-logo{
-    width:150px;
-  }
-
-  .hero h1{
-    font-size:28px;
-  }
+  .nav-menu.open{display:flex;}
+  .hero{min-height:65vh;background-size:400% 400%,contain;}
+  .hero-logo{width:150px;}
+  .hero h1{font-size:28px;}
 }
