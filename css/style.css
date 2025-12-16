@@ -74,20 +74,32 @@ body{
   50%{background-position:100% 50%,center;}
   100%{background-position:0% 50%,center;}
 }
-.hero-about{
+/* HERO VARIANTS (NO ROMPE ESTÉTICA) */
+.hero.hero-about{
   background:
     linear-gradient(120deg,#6A00F4,#B300FF,#FF3CD7,#6A00F4),
     url('../assets/bg.jpg');
+  background-size:400% 400%,cover;
+  background-position:center;
+  background-blend-mode:overlay;
 }
-.hero-projects{
+
+.hero.hero-projects{
   background:
     linear-gradient(120deg,#00FFA3,#00D4FF,#0099FF,#00FFA3),
     url('../assets/bg.jpg');
+  background-size:400% 400%,cover;
+  background-position:center;
+  background-blend-mode:overlay;
 }
-.hero-contact{
+
+.hero.hero-contact{
   background:
     linear-gradient(120deg,#FF5E00,#FF9A00,#FFD000,#FF5E00),
     url('../assets/bg.jpg');
+  background-size:400% 400%,cover;
+  background-position:center;
+  background-blend-mode:overlay;
 }
 .hero-content{max-width:900px;padding:40px 20px;}
 .hero-logo{width:220px;margin-bottom:20px;}
