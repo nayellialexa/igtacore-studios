@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!menuBtn || !navMenu) return;
 
-  // Abrir / cerrar menú
   menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("open");
   });

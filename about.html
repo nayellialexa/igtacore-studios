@@ -5,30 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sobre Nosotros - Igtacore Studios</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
 <header class="navbar">
   <img src="assets/logo.png" class="logo" alt="Igtacore">
 
   <div class="nav-actions">
-    <!-- Idioma -->
     <button id="langToggle" class="lang-btn">EN</button>
-
-    <!-- Menú móvil -->
     <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
   </div>
 
-  <!-- MENÚ (ESTO ES LO QUE FALTABA) -->
   <nav class="nav-menu" id="navMenu">
     <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
     <a href="about.html" data-es="Sobre Nosotros" data-en="About">Sobre Nosotros</a>
@@ -37,44 +27,51 @@
   </nav>
 </header>
 
-<!-- =========================
-     HERO ABOUT
-========================= -->
 <section class="hero hero-about">
   <div class="hero-content">
-    <h1 data-es="Nuestra Historia"
-        data-en="Our Story">
-      Nuestra Historia
+    <h1 data-es="Sobre Igtacore Studios" data-en="About Igtacore Studios">
+      Sobre Igtacore Studios
     </h1>
 
-    <p data-es="Igtacore Studios nace de la pasión por crear mundos interactivos."
-       data-en="Igtacore Studios was born from a passion for creating interactive worlds.">
-      Igtacore Studios nace de la pasión por crear mundos interactivos.
+    <p data-es="Un estudio independiente enfocado en crear experiencias interactivas con identidad propia."
+       data-en="An independent studio focused on creating interactive experiences with a strong identity.">
+      Un estudio independiente enfocado en crear experiencias interactivas con identidad propia.
     </p>
   </div>
 </section>
 
-<!-- =========================
-     CONTENT
-========================= -->
-<section class="content">
-  <h2 data-es="Nuestra Visión"
-      data-en="Our Vision">
-    Nuestra Visión
-  </h2>
+<section class="content about-section">
 
-  <p data-es="Crear experiencias memorables combinando narrativa, diseño y jugabilidad sólida."
-     data-en="Create memorable experiences by combining narrative, design and solid gameplay.">
-    Crear experiencias memorables combinando narrativa, diseño y jugabilidad sólida.
-  </p>
+  <div class="about-block">
+    <h2 data-es="Nuestra Historia" data-en="Our Story">Nuestra Historia</h2>
+    <p data-es="Igtacore Studios nació de la pasión por los videojuegos, la narrativa y la creación de mundos interactivos. Cada proyecto busca transmitir emociones y dejar una huella en el jugador."
+       data-en="Igtacore Studios was born from a passion for videogames, storytelling, and interactive world-building. Each project aims to convey emotion and leave a lasting impression on the player.">
+      Igtacore Studios nació de la pasión por los videojuegos, la narrativa y la creación de mundos interactivos. Cada proyecto busca transmitir emociones y dejar una huella en el jugador.
+    </p>
+  </div>
+
+  <div class="about-block">
+    <h2 data-es="Nuestra Misión" data-en="Our Mission">Nuestra Misión</h2>
+    <p data-es="Desarrollar videojuegos con personalidad, cuidando la narrativa, el arte y la jugabilidad para ofrecer experiencias memorables."
+       data-en="To develop videogames with personality, focusing on narrative, art, and gameplay to deliver memorable experiences.">
+      Desarrollar videojuegos con personalidad, cuidando la narrativa, el arte y la jugabilidad para ofrecer experiencias memorables.
+    </p>
+  </div>
+
+  <div class="about-block">
+    <h2 data-es="Nuestra Visión" data-en="Our Vision">Nuestra Visión</h2>
+    <p data-es="Consolidarnos como un estudio indie reconocido por su identidad visual, creatividad y compromiso con la calidad."
+       data-en="To establish ourselves as an indie studio recognized for visual identity, creativity, and commitment to quality.">
+      Consolidarnos como un estudio indie reconocido por su identidad visual, creatividad y compromiso con la calidad.
+    </p>
+  </div>
+
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
 <footer class="footer">
   <div class="footer-content">
     <p>© <span id="year"></span> Igtacore Studios</p>
+
     <div class="socials">
       <a href="https://www.tiktok.com/@igtacore_studios" target="_blank">TikTok</a>
       <a href="https://www.instagram.com/igtacorestudios/" target="_blank">Instagram</a>
@@ -84,17 +81,13 @@
   </div>
 </footer>
 
-
-<!-- =========================
-     JS GLOBAL
-========================= -->
 <script src="js/menu.js"></script>
 <script src="js/lang.js"></script>
 
 <script>
-  // Año automático
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
