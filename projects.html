@@ -1,77 +1,67 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Proyectos - Igtacore Studios</title>
+
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-<!-- NAVBAR -->
 <header class="navbar">
+  <img src="assets/logo.png" class="logo" alt="Igtacore">
 
-  <img src="assets/logo.png" alt="Igtacore" class="logo">
+  <div class="nav-actions">
+    <button id="langToggle" class="lang-btn">EN</button>
+    <button id="menuBtn" class="menu-btn">☰</button>
+  </div>
 
-  <!-- Botón menú móvil -->
-  <button class="nav-toggle" id="menuBtn">☰</button>
-
-  <!-- Menú -->
-  <nav class="nav-menu" id="mobileMenu">
-    <a href="index.html">Inicio</a>
-    <a href="about.html">Sobre Nosotros</a>
-    <a href="projects.html">Proyectos</a>
-    <a href="contact.html">Contacto</a>
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="about.html" data-es="Sobre Nosotros" data-en="About">Sobre Nosotros</a>
+    <a href="projects.html" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a>
   </nav>
-
 </header>
 
+<section class="hero">
+  <div class="hero-content">
+    <h1 data-es="Proyectos" data-en="Projects">Proyectos</h1>
+    <p data-es="Juegos en desarrollo y prototipos."
+       data-en="Games in development and prototypes.">
+       Juegos en desarrollo y prototipos.
+    </p>
+  </div>
+</section>
 
-  <!-- 🔥 HERO ANIMADO DE ESTA PÁGINA -->
-  <section class="hero-projects">
-    <div class="hero-inner">
-      <h1>Proyectos</h1>
-      <p class="hero-tag">Juegos en desarrollo, prototipos y experiencias interactivas.</p>
-    </div>
-  </section>
+<section class="content">
+  <h2>Proyecto Alpha</h2>
+  <p data-es="RPG narrativo en desarrollo."
+     data-en="Narrative RPG in development.">
+     RPG narrativo en desarrollo.
+  </p>
 
-  <!-- CONTENIDO -->
-  <main class="content">
+  <h2>Project Neon</h2>
+  <p data-es="FPS cooperativo próximo."
+     data-en="Upcoming cooperative FPS.">
+     FPS cooperativo próximo.
+  </p>
+</section>
 
-    <h2 class="muted">Explora nuestros proyectos</h2>
-    <p class="muted">Haz click para ver detalles, imágenes, progreso y características.</p>
+<footer class="footer">
+  <p>© <span id="year"></span> Igtacore Studios</p>
+</footer>
 
-    <div class="projects-grid" id="projectsGrid">
-      <!-- Tarjetas dinámicas desde JS -->
-    </div>
-
-    <!-- Modal detalle -->
-    <div id="projectModal" class="modal" aria-hidden="true">
-      <div class="modal-content">
-        <button class="modal-close" id="modalClose">×</button>
-        <div id="modalBody"></div>
-      </div>
-    </div>
-
-  </main>
-
-  <footer class="footer">
-    <p>© <span id="year3"></span> Igtacore Studios.</p>
-  </footer>
-
-  <script src="js/projects.js"></script>
- <script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("mobileMenu");
-
-  if(btn && menu){
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("show");
-    });
-  }
+<script src="js/lang.js"></script>
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+  menuBtn.onclick = () => navMenu.classList.toggle("open");
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
-g

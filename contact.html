@@ -1,81 +1,61 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto - Igtacore Studios</title>
+
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<!-- NAVBAR -->
-<!-- NAVBAR -->
+
 <header class="navbar">
+  <img src="assets/logo.png" class="logo" alt="Igtacore">
 
-  <img src="assets/logo.png" alt="Igtacore" class="logo">
+  <div class="nav-actions">
+    <button id="langToggle" class="lang-btn">EN</button>
+    <button id="menuBtn" class="menu-btn">☰</button>
+  </div>
 
-  <!-- Botón menú móvil -->
-  <button class="nav-toggle" id="menuBtn">☰</button>
-
-  <!-- Menú -->
-  <nav class="nav-menu" id="mobileMenu">
-    <a href="index.html">Inicio</a>
-    <a href="about.html">Sobre Nosotros</a>
-    <a href="projects.html">Proyectos</a>
-    <a href="contact.html">Contacto</a>
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="about.html" data-es="Sobre Nosotros" data-en="About">Sobre Nosotros</a>
+    <a href="projects.html" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a>
   </nav>
-
 </header>
 
-  <main class="content contact-page">
-    <h1>Contacto</h1>
-    <p class="muted">Escríbenos para colaboración, prensa o soporte.</p>
+<section class="hero">
+  <div class="hero-content">
+    <h1 data-es="Contacto" data-en="Contact">Contacto</h1>
+    <p data-es="¿Quieres colaborar con nosotros?"
+       data-en="Want to collaborate with us?">
+       ¿Quieres colaborar con nosotros?
+    </p>
+  </div>
+</section>
 
-    <form id="contactForm">
-      <label>Nombre
-        <input type="text" name="name" required>
-      </label>
-      <label>Correo
-        <input type="email" name="email" required>
-      </label>
-      <label>Tipo de solicitud
-        <select name="type">
-          <option value="colab">Colaboración</option>
-          <option value="press">Prensa</option>
-          <option value="business">Negocio</option>
-          <option value="support">Soporte</option>
-        </select>
-      </label>
-      <label>Mensaje
-        <textarea name="message" rows="6" required></textarea>
-      </label>
+<section class="content">
+  <p>Email: contacto@igtacore.com</p>
+  <p data-es="Síguenos en redes sociales"
+     data-en="Follow us on social media">
+     Síguenos en redes sociales
+  </p>
+</section>
 
-      <div class="form-row">
-        <button class="btn" type="submit">Enviar</button>
-        <button class="btn ghost" type="reset">Limpiar</button>
-      </div>
+<footer class="footer">
+  <p>© <span id="year"></span> Igtacore Studios</p>
+</footer>
 
-      <p id="formMsg" class="muted" aria-live="polite"></p>
-    </form>
-
-    <section class="contact-info">
-      <h3>O escríbenos a:</h3>
-      <p><strong>Email:</strong> contacto@igtacore.studio (pendiente)</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© <span id="year4"></span> Igtacore Studios.</p>
-  </footer>
-
+<script src="js/lang.js"></script>
 <script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("mobileMenu");
-
-  if(btn && menu){
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("show");
-    });
-  }
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+  menuBtn.onclick = () => navMenu.classList.toggle("open");
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
