@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("navMenu");
-  if(btn && menu){
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("open");
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+
+  if(menuBtn && navMenu){
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
     });
   }
 });
