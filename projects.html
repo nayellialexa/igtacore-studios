@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Proyectos - Igtacore Studios</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- =========================
+     NAVBAR
+========================= -->
 <header class="navbar">
   <img src="assets/logo.png" class="logo" alt="Igtacore">
 
   <div class="nav-actions">
+    <!-- Idioma -->
     <button id="langToggle" class="lang-btn">EN</button>
-    <button id="menuBtn" class="menu-btn">☰</button>
+
+    <!-- Menú móvil -->
+    <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
   </div>
 
   <nav class="nav-menu" id="navMenu">
@@ -27,39 +36,76 @@
   </nav>
 </header>
 
-<section class="hero">
+<!-- =========================
+     HERO PROJECTS
+========================= -->
+<section class="hero hero-projects">
   <div class="hero-content">
-    <h1 data-es="Proyectos" data-en="Projects">Proyectos</h1>
+    <h1 data-es="Proyectos"
+        data-en="Projects">
+      Proyectos
+    </h1>
+
     <p data-es="Juegos en desarrollo y prototipos."
        data-en="Games in development and prototypes.">
-       Juegos en desarrollo y prototipos.
+      Juegos en desarrollo y prototipos.
     </p>
   </div>
 </section>
 
+<!-- =========================
+     CONTENT
+========================= -->
 <section class="content">
-  <h2>Proyecto Alpha</h2>
-  <p data-es="RPG narrativo en desarrollo."
-     data-en="Narrative RPG in development.">
-     RPG narrativo en desarrollo.
-  </p>
 
-  <h2>Project Neon</h2>
-  <p data-es="FPS cooperativo próximo."
-     data-en="Upcoming cooperative FPS.">
-     FPS cooperativo próximo.
-  </p>
+  <article class="project">
+    <h2 data-es="Proyecto Alpha"
+        data-en="Project Alpha">
+      Proyecto Alpha
+    </h2>
+
+    <p data-es="RPG narrativo en desarrollo."
+       data-en="Narrative RPG in development.">
+      RPG narrativo en desarrollo.
+    </p>
+  </article>
+
+  <article class="project">
+    <h2 data-es="Project Neon"
+        data-en="Project Neon">
+      Project Neon
+    </h2>
+
+    <p data-es="FPS cooperativo próximo."
+       data-en="Upcoming cooperative FPS.">
+      FPS cooperativo próximo.
+    </p>
+  </article>
+
 </section>
 
+<!-- =========================
+     FOOTER
+========================= -->
 <footer class="footer">
   <p>© <span id="year"></span> Igtacore Studios</p>
 </footer>
 
+<!-- =========================
+     JS
+========================= -->
 <script src="js/lang.js"></script>
+
 <script>
+  /* ===== MENÚ HAMBURGUESA ===== */
   const menuBtn = document.getElementById("menuBtn");
   const navMenu = document.getElementById("navMenu");
-  menuBtn.onclick = () => navMenu.classList.toggle("open");
+
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+
+  /* ===== AÑO ===== */
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 

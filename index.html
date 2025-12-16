@@ -14,15 +14,21 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- =========================
+     NAVBAR
+========================= -->
 <header class="navbar">
   <img src="assets/logo.png" class="logo" alt="Igtacore">
 
   <div class="nav-actions">
+    <!-- Idioma -->
     <button id="langToggle" class="lang-btn">EN</button>
-    <button id="menuBtn" class="menu-btn">☰</button>
+
+    <!-- Menú móvil -->
+    <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
   </div>
 
+  <!-- Menú navegación -->
   <nav class="nav-menu" id="navMenu">
     <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
     <a href="about.html" data-es="Sobre Nosotros" data-en="About">Sobre Nosotros</a>
@@ -31,12 +37,15 @@
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 <section class="hero">
   <div class="hero-content">
     <img src="assets/logo.png" class="hero-logo" alt="Igtacore">
 
-    <h1 data-es="Desarrollamos mundos" data-en="We build worlds">
+    <h1 data-es="Desarrollamos mundos"
+        data-en="We build worlds">
       Desarrollamos mundos
     </h1>
 
@@ -46,24 +55,30 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="projects.html" class="btn"
+      <a href="projects.html"
+         class="btn"
          data-es="Ver proyectos"
          data-en="View projects">
-         Ver proyectos
+        Ver proyectos
       </a>
     </div>
   </div>
 </section>
 
+<!-- =========================
+     FOOTER
+========================= -->
 <footer class="footer">
   <p>© <span id="year"></span> Igtacore Studios</p>
 </footer>
 
-<!-- JS -->
+<!-- =========================
+     JS
+========================= -->
 <script src="js/lang.js"></script>
 
 <script>
-  // menú hamburguesa
+  /* ===== MENÚ HAMBURGUESA ===== */
   const menuBtn = document.getElementById("menuBtn");
   const navMenu = document.getElementById("navMenu");
 
@@ -71,7 +86,7 @@
     navMenu.classList.toggle("open");
   });
 
-  // año automático
+  /* ===== AÑO AUTOMÁTICO ===== */
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
