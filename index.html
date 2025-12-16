@@ -18,6 +18,7 @@
 <body data-theme="dark">
 
  <!-- NAVBAR -->
+<!-- NAVBAR -->
 <header class="navbar">
 
   <img src="assets/logo.png" alt="Igtacore" class="logo">
@@ -25,8 +26,8 @@
   <!-- Botón menú móvil -->
   <button class="nav-toggle" id="menuBtn">☰</button>
 
-  <!-- Menú (sirve para desktop y móvil) -->
-  <nav class="nav-links mobile-menu" id="mobileMenu">
+  <!-- Menú -->
+  <nav class="nav-menu" id="mobileMenu">
     <a href="index.html">Inicio</a>
     <a href="about.html">Sobre Nosotros</a>
     <a href="projects.html">Proyectos</a>
@@ -34,6 +35,7 @@
   </nav>
 
 </header>
+
   <!-- HERO -->
   <main>
     <section class="hero" id="hero">
@@ -113,16 +115,16 @@
   </div>
 </footer>
   <!-- JS -->
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const realMobileMenu = document.getElementById("realMobileMenu");
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
 
-    menuBtn.addEventListener("click", () => {
-      realMobileMenu.classList.toggle("show-menu");
+  if(btn && menu){
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("show");
     });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  }
+</script>
 
 </body>
 </html>

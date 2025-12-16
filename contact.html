@@ -8,6 +8,7 @@
 </head>
 <body>
 <!-- NAVBAR -->
+<!-- NAVBAR -->
 <header class="navbar">
 
   <img src="assets/logo.png" alt="Igtacore" class="logo">
@@ -15,14 +16,16 @@
   <!-- Botón menú móvil -->
   <button class="nav-toggle" id="menuBtn">☰</button>
 
-  <!-- Menú (sirve para desktop y móvil) -->
-  <nav class="nav-links mobile-menu" id="mobileMenu">
+  <!-- Menú -->
+  <nav class="nav-menu" id="mobileMenu">
     <a href="index.html">Inicio</a>
     <a href="about.html">Sobre Nosotros</a>
     <a href="projects.html">Proyectos</a>
     <a href="contact.html">Contacto</a>
   </nav>
+
 </header>
+
   <main class="content contact-page">
     <h1>Contacto</h1>
     <p class="muted">Escríbenos para colaboración, prensa o soporte.</p>
@@ -64,46 +67,15 @@
     <p>© <span id="year4"></span> Igtacore Studios.</p>
   </footer>
 
-  <script>
-  document.getElementById('year4').textContent = new Date().getFullYear();
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
 
-  const form = document.getElementById('contactForm');
-  const msg = document.getElementById('formMsg');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    msg.textContent = 'Enviando...';
-    const data = new FormData(form);
-    const body = Object.fromEntries(data.entries());
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(body)
-      });
-
-      if (res.ok) {
-        msg.textContent = '¡Mensaje enviado! Te contestaremos pronto.';
-        form.reset();
-        return;
-      }
-
-      // Fallback a Formspree (reemplaza por tu ID)
-      await fetch('https://formspree.io/f/tu_form_id', {
-        method: 'POST',
-        headers: {'Accept':'application/json'},
-        body: data
-      });
-
-      msg.textContent = '¡Mensaje enviado por Formspree!';
-      form.reset();
-
-    } catch (err) {
-      console.error(err);
-      msg.textContent = 'No se pudo enviar. Revisa tu conexión o configura el backend.';
-    }
-  });
-  </script>
+  if(btn && menu){
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  }
+</script>
 </body>
 </html>

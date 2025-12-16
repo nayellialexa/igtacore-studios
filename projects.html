@@ -9,7 +9,7 @@
 <body>
 
   <!-- NAVBAR -->
- <!-- NAVBAR -->
+<!-- NAVBAR -->
 <header class="navbar">
 
   <img src="assets/logo.png" alt="Igtacore" class="logo">
@@ -17,14 +17,16 @@
   <!-- Botón menú móvil -->
   <button class="nav-toggle" id="menuBtn">☰</button>
 
-  <!-- Menú (sirve para desktop y móvil) -->
-  <nav class="nav-links mobile-menu" id="mobileMenu">
+  <!-- Menú -->
+  <nav class="nav-menu" id="mobileMenu">
     <a href="index.html">Inicio</a>
     <a href="about.html">Sobre Nosotros</a>
     <a href="projects.html">Proyectos</a>
     <a href="contact.html">Contacto</a>
   </nav>
+
 </header>
+
 
   <!-- 🔥 HERO ANIMADO DE ESTA PÁGINA -->
   <section class="hero-projects">
@@ -59,9 +61,16 @@
   </footer>
 
   <script src="js/projects.js"></script>
-  <script>
-    document.getElementById('year3').textContent = new Date().getFullYear();
-  </script>
+ <script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  if(btn && menu){
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  }
+</script>
 
 </body>
 </html>
